@@ -1,0 +1,28 @@
+first_message = Greet.create(message: 'Good morning')
+second_message = Greet.create(message: 'Good afternoon')
+third_message = Greet.create(message: 'Hello people')
+fourth_message = Greet.create(message: 'Hi Micronauts')
+fifth_message = Greet.create(message: 'Good evening')
+
+
+def index
+    @greets = Greet.all.sample(1)
+    respond_to do |format|
+      format.json { render json: @greets, status: 200 }
+    end
+  end
+
+  class Api::V1::GreetController < ApplicationController
+
+  def index
+    @greets = Greet.all.sample(1)
+    respond_to do |format|
+      format.json { render json: @greets, status: 200 }
+    end
+  end
+
+end
+
+<Provider store={store}>
+    <App />
+  </Provider>,
